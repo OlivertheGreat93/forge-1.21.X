@@ -35,6 +35,10 @@ public class ModCreativeModeTabs {
                             .displayItems((itemDisplayParameters, output) -> {
                                 output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
                                 output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+                                output.accept(ModBlocks.ALEXANDRITE_ORE.get());
+                                output.accept(ModBlocks.NETHER_ALEXANDRITE_ORE.get());
+                                output.accept(ModBlocks.END_STONE_ALEXANDRITE_ORE.get());
+                                output.accept(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get());
 
                             }).build()); // title is what is printed over cursor hover
     // with tabs before to get this tab after last one
