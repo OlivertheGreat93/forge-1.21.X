@@ -21,6 +21,9 @@ public class ModItems {
     public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel",
             () -> new ChiselItem(new Item.Properties().durability(32)));
 
+    public static final RegistryObject<Item> FRIED_FOOFALAH = ITEMS.register("fried_foofalah",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.FRIED_FOOFALAH)));
+
 
 
     public static void register(IEventBus eventBus) {

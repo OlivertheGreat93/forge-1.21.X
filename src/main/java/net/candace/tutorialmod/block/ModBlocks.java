@@ -2,12 +2,14 @@ package net.candace.tutorialmod.block;
 
 
 import net.candace.tutorialmod.TutorialMod;
+import net.candace.tutorialmod.block.custom.MagicBlock;
 import net.candace.tutorialmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block; // needs to be the net minecraft world level block Block import
 import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.MagmaBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -43,6 +45,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> NETHER_ALEXANDRITE_ORE = registerBlock("nether_alexandrite_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 6),BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block",
+            () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
+
 
 
     // need to register blocks here 4th
