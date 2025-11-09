@@ -3,11 +3,16 @@ package net.candace.tutorialmod.item;
 import net.candace.tutorialmod.TutorialMod;
 import net.candace.tutorialmod.item.custom.ChiselItem;
 import net.candace.tutorialmod.item.custom.FuelItem;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.List;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -23,7 +28,14 @@ public class ModItems {
             () -> new ChiselItem(new Item.Properties().durability(32)));
 
     public static final RegistryObject<Item> FRIED_FOOFALAH = ITEMS.register("fried_foofalah",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.FRIED_FOOFALAH)));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.FRIED_FOOFALAH)) {
+                @Override //anonymous class since this doesnt have its own class
+                public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+                    pTooltipComponents.add(Component.translatable("tooltip.tutorialmod.fried_foofalah"));
+                    super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+                }
+            }
+    );
 
     public static final RegistryObject<Item> PEAT_BRICK = ITEMS.register("peat_brick",
             () -> new FuelItem(new Item.Properties(), 200));

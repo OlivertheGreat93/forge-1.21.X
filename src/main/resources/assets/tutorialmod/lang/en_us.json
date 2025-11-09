@@ -13,5 +13,11 @@
   "block.tutorialmod.nether_alexandrite_ore": "Block of Nether Alexandrite Ore",
   "block.tutorialmod.magic_block": "Magical Mystery Block",
 
-  "creativetab.tutorialmod.course_tab": "Course Items"
+  "creativetab.tutorialmod.course_tab": "Course Items",
+
+  "tooltip.tutorialmod.magic_block.tooltip": "This block is quite magical",
+  "tooltip.tutorialmod.chisel_item": "Press shift for more information",
+  "tooltip.tutorialmod.chisel_item.shift_down": "Secret message for chisel: This item changes certain blocks",
+  "tooltip.tutorialmod.fried_foofalah": "This tastes great"
+
 }
