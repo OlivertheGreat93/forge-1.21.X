@@ -16,22 +16,13 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, TutorialMod.MOD_ID);
 
     //step 4
-    public static final RegistryObject<CreativeModeTab> ALEXANDRITE_ITEMS_TAB =
-            CREATIVE_MODE_TABS.register("alexandrite_items_tab",
-                    ()-> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ALEXANDRITE.get())) // makes icon for tab
-                            .title(Component.translatable("creativetab.tutorialmod.alexandrite_items"))
-                            .displayItems((itemDisplayParameters, output) -> {
-                                output.accept(ModItems.ALEXANDRITE.get());
-                                output.accept(ModItems.RAW_ALEXANDRITE.get());
 
-                            }).build()); // title is what is printed over cursor hover
     // first tab is always added to end
 
-    public static final RegistryObject<CreativeModeTab> ALEXANDRITE_BLOCKS_TAB =
-            CREATIVE_MODE_TABS.register("alexandrite_blocks_tab",
+    public static final RegistryObject<CreativeModeTab> COURSE_TAB =
+            CREATIVE_MODE_TABS.register("course_tab",
                     ()-> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ALEXANDRITE_BLOCK.get())) // makes icon for tab
-                            .withTabsBefore(ALEXANDRITE_ITEMS_TAB.getId())
-                            .title(Component.translatable("creativetab.tutorialmod.alexandrite_blocks"))
+                            .title(Component.translatable("creativetab.tutorialmod.course_tab"))
                             .displayItems((itemDisplayParameters, output) -> {
                                 output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
                                 output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
@@ -39,6 +30,9 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.NETHER_ALEXANDRITE_ORE.get());
                                 output.accept(ModBlocks.END_STONE_ALEXANDRITE_ORE.get());
                                 output.accept(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get());
+                                output.accept(ModItems.ALEXANDRITE.get());
+                                output.accept(ModItems.RAW_ALEXANDRITE.get());
+                                output.accept(ModItems.CHISEL.get());
 
                             }).build()); // title is what is printed over cursor hover
     // with tabs before to get this tab after last one

@@ -1,10 +1,13 @@
 package net.candace.tutorialmod.block;
 
+
 import net.candace.tutorialmod.TutorialMod;
 import net.candace.tutorialmod.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block; // needs to be the net minecraft world level block Block import
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -29,20 +32,18 @@ public class ModBlocks {
                     .strength(3f).requiresCorrectToolForDrops())); //keep normal sound
 
     public static final RegistryObject<Block> ALEXANDRITE_ORE = registerBlock("alexandrite_ore",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(3f).requiresCorrectToolForDrops()));
-
+            () -> new DropExperienceBlock(UniformInt.of(2, 5), BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> DEEPSLATE_ALEXANDRITE_ORE = registerBlock("deepslate_alexandrite_ore",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(3f).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> NETHER_ALEXANDRITE_ORE = registerBlock("nether_alexandrite_ore",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(3f).requiresCorrectToolForDrops()));
-
+            () -> new DropExperienceBlock(UniformInt.of(3, 7), BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> END_STONE_ALEXANDRITE_ORE = registerBlock("end_stone_alexandrite_ore",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(3f).requiresCorrectToolForDrops()));
+            () -> new DropExperienceBlock(UniformInt.of(5, 8), BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> NETHER_ALEXANDRITE_ORE = registerBlock("nether_alexandrite_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3, 6),BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops()));
+
 
     // need to register blocks here 4th
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
