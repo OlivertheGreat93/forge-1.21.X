@@ -36,6 +36,7 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.RAW_ALEXANDRITE.get());
                                 output.accept(ModItems.CHISEL.get());
                                 output.accept(ModItems.FRIED_FOOFALAH.get());
+                                output.accept(ModItems.PEAT_BRICK.get());
 
                             }).build()); // title is what is printed over cursor hover
     // with tabs before to get this tab after last one
