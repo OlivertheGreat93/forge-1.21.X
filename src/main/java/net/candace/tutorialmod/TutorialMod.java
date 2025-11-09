@@ -66,6 +66,7 @@ public class TutorialMod {
             event.accept(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE);
             event.accept(ModBlocks.NETHER_ALEXANDRITE_ORE);
             event.accept(ModBlocks.END_STONE_ALEXANDRITE_ORE);
+            event.accept(ModBlocks.MAGIC_BLOCK);
         }
     }
 
