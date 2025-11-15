@@ -38,6 +38,15 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.FRIED_FOOFALAH.get());
                                 output.accept(ModItems.PEAT_BRICK.get());
 
+                                output.accept(ModBlocks.ALEXANDRITE_STAIRS.get());
+                                output.accept(ModBlocks.ALEXANDRITE_SLAB.get());
+                                output.accept(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get());
+                                output.accept(ModBlocks.ALEXANDRITE_BUTTON.get());
+                                output.accept(ModBlocks.ALEXANDRITE_DOOR.get());
+                                output.accept(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
+                                output.accept(ModBlocks.ALEXANDRITE_FENCE.get());
+                                output.accept(ModBlocks.ALEXANDRITE_FENCE_GATE.get());
+
                             }).build()); // title is what is printed over cursor hover
     // with tabs before to get this tab after last one
     // after both new tabs are added here go to langs json and add translation
