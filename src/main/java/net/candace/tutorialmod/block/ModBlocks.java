@@ -2,6 +2,7 @@ package net.candace.tutorialmod.block;
 
 
 import net.candace.tutorialmod.TutorialMod;
+import net.candace.tutorialmod.block.custom.AlexandriteLampBlock;
 import net.candace.tutorialmod.block.custom.MagicBlock;
 import net.candace.tutorialmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -68,6 +69,9 @@ public class ModBlocks {
     public static final RegistryObject<TrapDoorBlock> ALEXANDRITE_TRAPDOOR = registerBlock("alexandrite_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().noOcclusion()));
 
+    public static final RegistryObject<Block> ALEXANDRITE_LAMP = registerBlock("alexandrite_lamp",
+            () -> new AlexandriteLampBlock(BlockBehaviour.Properties.of().strength(3f)
+                    .lightLevel(state -> state.getValue(AlexandriteLampBlock.CLICKED) ? 15 : 0)));
 
 
     // need to register blocks here 4th

@@ -46,6 +46,7 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
                                 output.accept(ModBlocks.ALEXANDRITE_FENCE.get());
                                 output.accept(ModBlocks.ALEXANDRITE_FENCE_GATE.get());
+                                output.accept(ModBlocks.ALEXANDRITE_LAMP.get());
 
                             }).build()); // title is what is printed over cursor hover
     // with tabs before to get this tab after last one
