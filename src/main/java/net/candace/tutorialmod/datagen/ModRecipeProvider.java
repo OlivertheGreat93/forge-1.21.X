@@ -3,9 +3,11 @@ package net.candace.tutorialmod.datagen;
 import net.candace.tutorialmod.TutorialMod;
 import net.candace.tutorialmod.block.ModBlocks;
 import net.candace.tutorialmod.item.ModItems;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -31,6 +33,46 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModItems.ALEXANDRITE.get()) //* make sure single quote for char
+                .unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has(ModItems.ALEXANDRITE.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALEXANDRITE_PICKAXE.get())
+                .pattern("XXX")
+                .pattern(" # ")
+                .pattern(" # ")
+                .define('X', ModItems.ALEXANDRITE.get()) //* make sure single quote for char
+                .define('#', Items.STICK) //* make sure single quote for char
+                .unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has(ModItems.ALEXANDRITE.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALEXANDRITE_AXE.get())
+                .pattern("XX")
+                .pattern("X#")
+                .pattern(" #")
+                .define('X', ModItems.ALEXANDRITE.get()) //* make sure single quote for char
+                .define('#', Items.STICK) //* make sure single quote for char
+                .unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has(ModItems.ALEXANDRITE.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALEXANDRITE_HOE.get())
+                .pattern("XX")
+                .pattern(" #")
+                .pattern(" #")
+                .define('X', ModItems.ALEXANDRITE.get()) //* make sure single quote for char
+                .define('#', Items.STICK) //* make sure single quote for char
+                .unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has(ModItems.ALEXANDRITE.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALEXANDRITE_SWORD.get())
+                .pattern("X")
+                .pattern("X")
+                .pattern("#")
+                .define('X', ModItems.ALEXANDRITE.get()) //* make sure single quote for char
+                .define('#', Items.STICK) //* make sure single quote for char
+                .unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has(ModItems.ALEXANDRITE.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALEXANDRITE_SHOVEL.get())
+                .pattern("X")
+                .pattern("#")
+                .pattern("#")
+                .define('X', ModItems.ALEXANDRITE.get()) //* make sure single quote for char
+                .define('#', Items.STICK) //* make sure single quote for char
                 .unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has(ModItems.ALEXANDRITE.get())).save(pRecipeOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 9)
