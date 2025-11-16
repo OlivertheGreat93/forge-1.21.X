@@ -53,6 +53,11 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.ALEXANDRITE_PICKAXE.get());
                                 output.accept(ModItems.ALEXANDRITE_HOE.get());
                                 output.accept(ModItems.ALEXANDRITE_SHOVEL.get());
+                                output.accept(ModItems.ALEXANDRITE_HAMMER.get());
+                                output.accept(ModItems.ALEXANDRITE_HELMET.get());
+                                output.accept(ModItems.ALEXANDRITE_CHESTPLATE.get());
+                                output.accept(ModItems.ALEXANDRITE_LEGGINGS.get());
+                                output.accept(ModItems.ALEXANDRITE_BOOTS.get());
 
                             }).build()); // title is what is printed over cursor hover
     // with tabs before to get this tab after last one
