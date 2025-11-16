@@ -2,6 +2,7 @@ package net.candace.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.candace.tutorialmod.block.ModBlocks;
+import net.candace.tutorialmod.component.ModDataComponentTypes;
 import net.candace.tutorialmod.item.ModCreativeModeTabs;
 import net.candace.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
@@ -42,6 +43,7 @@ public class TutorialMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus); // this finishes deferred register setup
 
+        ModDataComponentTypes.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
