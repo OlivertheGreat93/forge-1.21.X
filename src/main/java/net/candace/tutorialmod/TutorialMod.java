@@ -5,6 +5,7 @@ import net.candace.tutorialmod.block.ModBlocks;
 import net.candace.tutorialmod.component.ModDataComponentTypes;
 import net.candace.tutorialmod.item.ModCreativeModeTabs;
 import net.candace.tutorialmod.item.ModItems;
+import net.candace.tutorialmod.sound.ModSounds;
 import net.candace.tutorialmod.util.ModItemProperties;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -46,6 +47,7 @@ public class TutorialMod {
 
         ModDataComponentTypes.register(modEventBus);
         // Register the item to a creative tab
+        ModSounds.register(modEventBus);
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
