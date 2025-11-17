@@ -5,6 +5,7 @@ import net.candace.tutorialmod.block.ModBlocks;
 import net.candace.tutorialmod.component.ModDataComponentTypes;
 import net.candace.tutorialmod.item.ModCreativeModeTabs;
 import net.candace.tutorialmod.item.ModItems;
+import net.candace.tutorialmod.util.ModItemProperties;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -83,6 +84,7 @@ public class TutorialMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            ModItemProperties.addCustomItemProperties();
         }
     }
 }
