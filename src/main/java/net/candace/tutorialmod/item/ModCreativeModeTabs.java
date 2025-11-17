@@ -62,6 +62,8 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.KAUPEN_SMITHING_TEMPLATE.get());
                                 output.accept(ModItems.KAUPEN_BOW.get());
 
+                                output.accept(ModItems.BAR_BRAWL_MUSIC_DISC.get());
+
                             }).build()); // title is what is printed over cursor hover
     // with tabs before to get this tab after last one
     // after both new tabs are added here go to langs json and add translation
