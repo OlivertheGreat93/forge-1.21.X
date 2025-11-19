@@ -47,6 +47,13 @@
   "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
   "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",
 
+  "painting.tutorialmod.world.title": "World",
+  "painting.tutorialmod.world.author": "NanoAttack",
+  "painting.tutorialmod.shrimp.title": "Shrimp",
+  "painting.tutorialmod.shrimp.author": "NanoAttack",
+  "painting.tutorialmod.saw_them.title": "Saw Them",
+  "painting.tutorialmod.saw_them.author": "NanoAttack",
+
   "creativetab.tutorialmod.course_tab": "Course Items",
 
   "tooltip.tutorialmod.magic_block.tooltip": "This block is quite magical",
