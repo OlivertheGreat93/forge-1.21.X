@@ -3,6 +3,7 @@ package net.candace.tutorialmod;
 import com.mojang.logging.LogUtils;
 import net.candace.tutorialmod.block.ModBlocks;
 import net.candace.tutorialmod.component.ModDataComponentTypes;
+import net.candace.tutorialmod.effect.ModEffects;
 import net.candace.tutorialmod.item.ModCreativeModeTabs;
 import net.candace.tutorialmod.item.ModItems;
 import net.candace.tutorialmod.sound.ModSounds;
@@ -50,6 +51,7 @@ public class TutorialMod {
         ModSounds.register(modEventBus);
         modEventBus.addListener(this::addCreative);
 
+        ModEffects.register(modEventBus);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
