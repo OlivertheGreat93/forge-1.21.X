@@ -2,8 +2,13 @@ package net.candace.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.candace.tutorialmod.block.ModBlocks;
+import net.candace.tutorialmod.component.ModDataComponentTypes;
+import net.candace.tutorialmod.effect.ModEffects;
 import net.candace.tutorialmod.item.ModCreativeModeTabs;
 import net.candace.tutorialmod.item.ModItems;
+import net.candace.tutorialmod.potion.ModPotions;
+import net.candace.tutorialmod.sound.ModSounds;
+import net.candace.tutorialmod.util.ModItemProperties;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -42,9 +47,13 @@ public class TutorialMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus); // this finishes deferred register setup
 
+        ModDataComponentTypes.register(modEventBus);
         // Register the item to a creative tab
+        ModSounds.register(modEventBus);
         modEventBus.addListener(this::addCreative);
 
+        ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -81,6 +90,7 @@ public class TutorialMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            ModItemProperties.addCustomItemProperties();
         }
     }
 }
