@@ -6,6 +6,7 @@ import net.candace.tutorialmod.component.ModDataComponentTypes;
 import net.candace.tutorialmod.effect.ModEffects;
 import net.candace.tutorialmod.item.ModCreativeModeTabs;
 import net.candace.tutorialmod.item.ModItems;
+import net.candace.tutorialmod.potion.ModPotions;
 import net.candace.tutorialmod.sound.ModSounds;
 import net.candace.tutorialmod.util.ModItemProperties;
 import net.minecraft.world.item.CreativeModeTab;
@@ -52,6 +53,7 @@ public class TutorialMod {
         modEventBus.addListener(this::addCreative);
 
         ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
